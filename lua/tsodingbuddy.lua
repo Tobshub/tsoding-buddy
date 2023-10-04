@@ -1,7 +1,7 @@
 local Color, c, Group, g, s = require('colorbuddy').setup()
 local v = vim
 
-v.g.colors_name = 'tsoding-buddy'
+v.g.colors_name = 'tsodingbuddy'
 
 local palette = {
   white   = { gui = '#e1e5f0', cterm = 250 },
