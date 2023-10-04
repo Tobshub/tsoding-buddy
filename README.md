@@ -1,6 +1,6 @@
 # Tsodingbuddy
 
-A plain succulent 256-color theme using [colorbuddy].
+A plain succulent 256-color theme using [colorbuddy], designed to look like Tsoding's emacs theme
 
 [colorbuddy]: https://github.com/tjdevries/colorbuddy.nvim
 
