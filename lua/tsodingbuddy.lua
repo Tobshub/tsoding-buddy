@@ -176,9 +176,9 @@ Group.link('GitSignsAdd', g.Number)
 Group.link('GitSignsChange', g.Tsoding)
 Group.link('GitSignsDelete', g.Error)
 
-Group.new('IlluminatedWordText', c.none, c.black:light(), s.none)
-Group.new('IlluminatedWordRead', c.none, c.black:light(), s.none)
-Group.new('IlluminatedWordWrite', c.none, c.black:light(), s.none)
+Group.new('IlluminatedWordText', c.none, c.backgnd:light(), s.none)
+Group.new('IlluminatedWordRead', c.none, c.backgnd:light(), s.none)
+Group.new('IlluminatedWordWrite', c.none, c.backgnd:light(), s.none)
 
 Group.link('NvimTreeExecFile', g.User1)
 Group.link('NvimTreeGitDeleted', g.Noise)
