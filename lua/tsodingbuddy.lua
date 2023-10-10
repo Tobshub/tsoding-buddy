@@ -129,7 +129,7 @@ Group.link('Question', g.Warning)
 Group.link('WarningMsg', g.Warning)
 Group.link('HealthSuccess', g.String)
 
-Group.link('ColorColumn', g.CursorLine)
+Group.link('ColorColumn', g.Visual)
 Group.link('CursorLine', g.Blank)
 Group.link('CursorLineNr', g.Tsoding)
 Group.link('EndOfBuffer', g.NonText)
