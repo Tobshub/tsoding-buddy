@@ -4,25 +4,27 @@ local v = vim
 v.g.colors_name = 'tsodingbuddy'
 
 local palette = {
-  white   = { gui = '#e1e5f0', cterm = 250 },
-  grey    = { gui = '#949494', cterm = 246 },
-  dark    = { gui = '#767676', cterm = 243 },
-  darker  = { gui = '#585858', cterm = 240 },
-  darkest = { gui = '#444444', cterm = 238 },
-  base    = { gui = '#262626', cterm = 235 },
-  black   = { gui = '#1c1c1c', cterm = 234 },
-  backgnd = { gui = '#121212', cterm = 233 },
+  white     = { gui = '#e1e5f0', cterm = 250 },
+  grey      = { gui = '#949494', cterm = 246 },
+  dark      = { gui = '#767676', cterm = 243 },
+  darker    = { gui = '#585858', cterm = 240 },
+  darkest   = { gui = '#444444', cterm = 238 },
+  base      = { gui = '#262626', cterm = 235 },
+  black     = { gui = '#1c1c1c', cterm = 234 },
+  backgnd   = { gui = '#121212', cterm = 233 },
 
-  yellow  = { gui = '#f0d343', cterm = 058 },
-  cactus  = { gui = '#508242', cterm = 065 },
-  grass   = { gui = '#87af87', cterm = 108 },
-  brick   = { gui = '#875f5f', cterm = 095 },
-  purple  = { gui = '#8787af', cterm = 103 },
-  cyan    = { gui = '#87afd7', cterm = 110 },
-  red     = { gui = '#d75f5f', cterm = 167 },
-  orange  = { gui = '#d7875f', cterm = 173 },
-  brown   = { gui = '#af875f', cterm = 137 },
-  blue    = { gui = '#5f87af', cterm = 067 },
+  yellow    = { gui = '#f0d343', cterm = 058 },
+  cactus    = { gui = '#508242', cterm = 065 },
+  grass     = { gui = '#87af87', cterm = 108 },
+  brick     = { gui = '#875f5f', cterm = 095 },
+  purple    = { gui = '#8787af', cterm = 103 },
+  cyan      = { gui = '#87afd7', cterm = 110 },
+  red       = { gui = '#d75f5f', cterm = 167 },
+  dark_red  = { gui = '#4a2121', cterm = 167 },
+  orange    = { gui = '#d7875f', cterm = 173 },
+  brown     = { gui = '#af875f', cterm = 137 },
+  blue      = { gui = '#5f87af', cterm = 067 },
+  dark_blue = { gui = '#39434d', cterm = 067 },
 }
 
 -- initialize all colors from palette
@@ -69,7 +71,7 @@ Group.new('MatchParen', c.white, c.red, s.none)
 Group.new('Pmenu', c.darker, c.black, s.none)
 Group.new('PmenuSel', c.grey, c.black, s.none)
 Group.new('PmenuThumb', c.brown, c.black, s.none) -- not sure what this is
-Group.new('Search', c.black, c.red, s.underline)
+Group.new('Search', c.none, c.dark_red:light(), s.none)
 Group.new('StatusLine', c.none, c.backgnd:light(), s.none)
 Group.new('StatusLineNC', c.black, c.black, s.none)
 Group.new('URI', c.cactus, c.none, s.underline)
@@ -176,9 +178,9 @@ Group.link('GitSignsAdd', g.Number)
 Group.link('GitSignsChange', g.Tsoding)
 Group.link('GitSignsDelete', g.Error)
 
-Group.new('IlluminatedWordText', c.none, c.backgnd:dark(), s.none)
-Group.new('IlluminatedWordRead', c.none, c.backgnd:dark(), s.none)
-Group.new('IlluminatedWordWrite', c.none, c.backgnd:dark(), s.none)
+Group.new('IlluminatedWordText', c.none, c.dark_blue, s.none)
+Group.new('IlluminatedWordRead', c.none, c.dark_blue, s.none)
+Group.new('IlluminatedWordWrite', c.none, c.dark_blue, s.none)
 
 Group.link('NvimTreeExecFile', g.User1)
 Group.link('NvimTreeGitDeleted', g.Noise)
