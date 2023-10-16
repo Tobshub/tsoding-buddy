@@ -118,7 +118,7 @@ Group.link('@namespace', g.Noise)
 Group.link('@punctuation.special', g.Noise)
 Group.link('@storageclass.lifetime', g.User2)
 Group.link('@string.docstring', g.Comment)
-Group.link('@type.builtin', g.Normal)
+Group.link('@type.builtin', g.Type)
 Group.link('@type.qualifier', g.Type)
 Group.link('@variable.builtin', g.String)
 
