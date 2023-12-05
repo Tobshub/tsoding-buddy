@@ -1,6 +1,8 @@
 local Color, c, Group, g, s = require('colorbuddy').setup()
 local v = vim
 
+vim.cmd("hi clear")
+
 v.g.colors_name = 'tsodingbuddy'
 
 local palette = {
@@ -44,7 +46,7 @@ Group.new('NonText', c.darkest, c.none, s.none)
 
 Group.new('Error', c.red, c.none, s.none)
 Group.new('Number', c.purple, c.none, s.none)
-Group.new('Special', c.yellow, c.none, s.none)
+Group.new('Special', c.purple, c.none, s.none)
 Group.new('String', c.grass, c.none, s.none)
 Group.new('Title', c.cyan, c.none, s.none)
 Group.new('Todo', c.yellow, c.none, s.none)
@@ -95,7 +97,7 @@ Group.link('Keyword', g.Tsoding)
 Group.link('Conditional', g.Tsoding)
 Group.link('Exception', g.Tsoding)
 Group.link('Include', g.Tsoding)
-Group.link('Macro', g.Tsoding)
+Group.link('Macro', g.Special)
 Group.link('Operator', g.Normal)
 Group.link('PreProc', g.Normal)
 Group.link('Repeat', g.Tsoding)
@@ -113,14 +115,14 @@ Group.link('Tag', g.User2)
 Group.link('@attribute', g.Tsoding)
 Group.link('@constant.builtin', g.User1)
 Group.link('@constructor', g.Normal)
-Group.link('@function.builtin', g.Special)
+Group.link('@function.builtin', g.Normal)
 Group.link('@namespace', g.Noise)
 Group.link('@punctuation.special', g.Noise)
 Group.link('@storageclass.lifetime', g.User2)
 Group.link('@string.docstring', g.Comment)
 Group.link('@type.builtin', g.Type)
 Group.link('@type.qualifier', g.Type)
-Group.link('@variable.builtin', g.String)
+Group.link('@variable.builtin', g.Normal)
 
 -- USER INTERFACE
 
@@ -178,9 +180,9 @@ Group.link('GitSignsAdd', g.Number)
 Group.link('GitSignsChange', g.Tsoding)
 Group.link('GitSignsDelete', g.Error)
 
-Group.new('IlluminatedWordText', c.none, c.none, s.none)
-Group.new('IlluminatedWordRead', c.none, c.none, s.none)
-Group.new('IlluminatedWordWrite', c.none, c.none, s.none)
+Group.new('IlluminatedWordText', c.none, c.none, s.underline)
+Group.new('IlluminatedWordRead', c.none, c.none, s.underline)
+Group.new('IlluminatedWordWrite', c.none, c.none, s.underline)
 
 Group.link('NvimTreeExecFile', g.User1)
 Group.link('NvimTreeGitDeleted', g.Noise)
