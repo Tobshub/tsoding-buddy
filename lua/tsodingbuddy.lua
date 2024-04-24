@@ -1,37 +1,41 @@
-local Color, c, Group, g, s = require('colorbuddy').setup()
-local v = vim
-
+local colorbuddy = require('colorbuddy')
 vim.cmd("hi clear")
 
-v.g.colors_name = 'tsodingbuddy'
+vim.g.colors_name = 'tsodingbuddy'
+
+local Color = colorbuddy.Color
+local c = colorbuddy.colors
+local Group = colorbuddy.Group
+local g = colorbuddy.groups
+local s = colorbuddy.styles
 
 local palette = {
-  white       = { gui = '#e1e5f0', cterm = 250 },
-  grey        = { gui = '#949494', cterm = 246 },
-  dark        = { gui = '#767676', cterm = 243 },
-  darker      = { gui = '#585858', cterm = 240 },
-  darkest     = { gui = '#444444', cterm = 238 },
-  base        = { gui = '#262626', cterm = 235 },
-  black       = { gui = '#1c1c1c', cterm = 234 },
-  backgnd     = { gui = '#121212', cterm = 233 },
+	white       = { gui = '#e1e5f0', cterm = 250 },
+	grey        = { gui = '#949494', cterm = 246 },
+	dark        = { gui = '#767676', cterm = 243 },
+	darker      = { gui = '#585858', cterm = 240 },
+	darkest     = { gui = '#444444', cterm = 238 },
+	base        = { gui = '#262626', cterm = 235 },
+	black       = { gui = '#1c1c1c', cterm = 234 },
+	backgnd     = { gui = '#121212', cterm = 233 },
 
-  yellow      = { gui = '#f0d343', cterm = 058 },
-  cactus      = { gui = '#508242', cterm = 065 },
-  grass       = { gui = '#87af87', cterm = 108 },
-  brick       = { gui = '#875f5f', cterm = 095 },
-  purple      = { gui = '#8787af', cterm = 103 },
-  dark_purple = { gui = '#414154', cterm = 103 },
-  cyan        = { gui = '#87afd7', cterm = 110 },
-  red         = { gui = '#d75f5f', cterm = 167 },
-  dark_red    = { gui = '#4a2121', cterm = 167 },
-  orange      = { gui = '#d7875f', cterm = 173 },
-  brown       = { gui = '#af875f', cterm = 137 },
-  blue        = { gui = '#5f87af', cterm = 067 },
+	yellow      = { gui = '#f0d343', cterm = 058 },
+	cactus      = { gui = '#508242', cterm = 065 },
+	grass       = { gui = '#87af87', cterm = 108 },
+	brick       = { gui = '#875f5f', cterm = 095 },
+	purple      = { gui = '#8787af', cterm = 103 },
+	dark_purple = { gui = '#414154', cterm = 103 },
+	cyan        = { gui = '#87afd7', cterm = 110 },
+	red         = { gui = '#d75f5f', cterm = 167 },
+	dark_red    = { gui = '#4a2121', cterm = 167 },
+	orange      = { gui = '#d7875f', cterm = 173 },
+	brown       = { gui = '#af875f', cterm = 137 },
+	blue        = { gui = '#5f87af', cterm = 067 },
 }
 
 -- initialize all colors from palette
 for key, value in pairs(palette) do
-  Color.new(key, value.gui)
+	Color.new(key, value.gui)
 end
 
 -- EDITOR BASICS
@@ -156,7 +160,7 @@ Group.link('FloatBorder', g.NonText)
 -- PLUGIN SPECIFIC
 
 if vim.g.cactusbuddy_express_line_enabled then
-  require 'statusline'
+	require 'statusline'
 end
 
 Group.new('DiagnosticUnderlineError', c.none, c.none, s.underline, c.red)
