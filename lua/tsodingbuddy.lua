@@ -149,13 +149,13 @@ Group.link('SignColumn', g.LineNr)
 Group.link('VertSplit', g.NonText)
 Group.link('Whitespace', g.NonText)
 
-Group.link('NormalFloat', g.StatusLine)
+Group.link('NormalFloat', g.Normal)
 Group.link('TabLine', g.Normal)
 Group.link('TabLineFill', g.Normal)
 Group.link('TabLineSel', g.Special)
 
 Group.link('NvimInternalError', g.Error)
-Group.link('FloatBorder', g.NonText)
+Group.link('FloatBorder', g.Noise)
 
 -- PLUGIN SPECIFIC
 
