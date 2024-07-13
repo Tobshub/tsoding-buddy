@@ -8,7 +8,7 @@ A plain succulent 256-color theme using [colorbuddy], designed to look like Tsod
 
 ### Rust
 
-![tsodingbuddy-rust](media/tsodingbuddy%20rust.png)
+![tsodingbuddy-ss](media/tsodingbuddy%20ss.png)
 
 
 ## Installation
