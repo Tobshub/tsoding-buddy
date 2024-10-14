@@ -15,13 +15,14 @@ local palette = {
 	dark        = { gui = '#767676', cterm = 243 },
 	darker      = { gui = '#585858', cterm = 240 },
 	darkest     = { gui = '#444444', cterm = 238 },
-	base        = { gui = '#262626', cterm = 235 },
+	base        = { gui = '#181818', cterm = 235 },
 	black       = { gui = '#1c1c1c', cterm = 234 },
 	backgnd     = { gui = '#121212', cterm = 233 },
 
-	yellow      = { gui = '#f0d343', cterm = 058 },
+	yellow      = { gui = '#ffdd33', cterm = 058 },
 	cactus      = { gui = '#508242', cterm = 065 },
 	grass       = { gui = '#87af87', cterm = 108 },
+	quartz      = { gui = '#95a99f', cterm = 108 },
 	brick       = { gui = '#875f5f', cterm = 095 },
 	purple      = { gui = '#8787af', cterm = 103 },
 	dark_purple = { gui = '#414154', cterm = 103 },
@@ -30,8 +31,9 @@ local palette = {
 	dark_red    = { gui = '#4a2121', cterm = 167 },
 	orange      = { gui = '#d7875f', cterm = 173 },
 	brown       = { gui = '#af875f', cterm = 137 },
-	blue        = { gui = '#5f87af', cterm = 067 },
+	blue        = { gui = '#96a6c8', cterm = 067 },
 }
+
 
 -- initialize all colors from palette
 for key, value in pairs(palette) do
@@ -41,8 +43,9 @@ end
 -- EDITOR BASICS
 
 Group.new('Header', c.white, c.none, s.none)
-Group.new('Normal', c.white, c.none, s.none)
+Group.new('Normal', c.white, c.base, s.none)
 Group.new('Type', c.grey, c.none, s.none)
+Group.new('Quartz', c.quartz, c.none, s.none)
 Group.new('Noise', c.dark, c.none, s.none)
 Group.new('Tsoding', c.yellow, c.none, s.none)
 Group.new('Comment', c.orange, c.none, s.none)
@@ -90,7 +93,7 @@ Group.new('Blank', c.none, c.none, s.none)
 
 Group.link('Constant', g.Normal)
 Group.link('Delimiter', g.Normal)
-Group.link('Function', g.Normal)
+Group.link('Function', g.User2)
 Group.link('Identifier', g.Normal)
 Group.link('Statement', g.Normal)
 Group.link('Type', g.Type)
@@ -120,6 +123,7 @@ Group.link('@attribute', g.Tsoding)
 Group.link('@constant.builtin', g.User1)
 Group.link('@constructor', g.Normal)
 Group.link('@function.builtin', g.Normal)
+Group.link('@function.method.call', g.Quartz)
 Group.link('@namespace', g.Noise)
 Group.link('@punctuation.special', g.Noise)
 Group.link('@storageclass.lifetime', g.User2)
